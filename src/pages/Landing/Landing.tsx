@@ -1,8 +1,10 @@
+import Hero from "./components/Hero";
 const Landing = () => {
   return (
-    <div>
+    <section className="mt-20">
+      <Hero />
       <h1>Landing</h1>
-    </div>
+    </section>
   );
 };
 
