@@ -7,7 +7,7 @@ const Phone = ({ children }: { children: React.ReactNode }) => {
     minute: "2-digit",
   });
   return (
-    <div className="border-4 border-[#f59d56] rounded-[60px] w-[300px] h-[600px] shadow-lg">
+    <div className="border-4 border-[#f59d56] rounded-[60px] w-[300px] h-[600px] shadow-2xl">
       <div className="w-full h-full border-6 border-black rounded-[55px] relative">
         <div className="w-20 h-6 z-5 bg-black rounded-full absolute top-5 left-1/2 -translate-x-1/2 -translate-y-1/2" />
         <div className="w-1 h-18  bg-[#cc8448] rounded-r-full absolute -right-3.5 top-[150px] " />
