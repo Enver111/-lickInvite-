@@ -49,10 +49,9 @@ const PaperProblems = () => {
             scale={1}
             threshold={0.1}
             delay={0}
-            className=""
           >
             <SpotlightCard
-              className="custom-spotlight-card"
+              className="custom-spotlight-card shadow-xl"
               spotlightColor="rgba(227, 133, 60, 0.25)"
             >
               <div className="flex flex-col gap-2 text-[#E3853C] font-script">
