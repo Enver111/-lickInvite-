@@ -6,11 +6,13 @@ const Title = ({
   subtitle,
   description,
   className,
+  titleClassName,
 }: {
   title: string;
   subtitle?: string;
   description?: string;
   className?: string;
+  titleClassName?: string;
 }) => {
   return (
     <AnimatedContent
@@ -29,7 +31,12 @@ const Title = ({
       <h2 className="text-xl font-light text-[#E3853C] text-center">
         {subtitle}
       </h2>
-      <h1 className="font-script text-4xl text-gray-500  text-center">
+      <h1
+        className={cn(
+          "font-script text-4xl text-gray-500  text-center",
+          titleClassName,
+        )}
+      >
         {title}
       </h1>
       <p className="font-script text-4xl font-medium text-[#E3853C] text-center">

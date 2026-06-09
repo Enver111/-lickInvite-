@@ -9,9 +9,9 @@ const TwoFormats = () => {
         subtitle="Два формата"
         description="задачи и бюджет"
       />
-      <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-0 border border-border">
+      <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-0 border border-border rounded-2xl">
         {/* Left */}
-        <div className="p-10 lg:p-14 border-b md:border-b-0 md:border-r border-border group">
+        <div className="p-10 lg:p-14 border-b md:border-b-0 md:border-r border-border group rounded-l-2xl">
           <div className="w-10 h-px mb-10 bg-[#cc8448]" />
           <h3
             className="text-gray-500 mb-2 text-2xl "
@@ -33,7 +33,7 @@ const TwoFormats = () => {
         </div>
 
         {/* Right */}
-        <div className="p-10 lg:p-14 group bg-[#0f0f0f]">
+        <div className="p-10 lg:p-14 group bg-[#0f0f0f] rounded-r-2xl">
           <div className="w-10 h-px mb-10 bg-[#cc8448]" />
           <h3
             className="text-white mb-2 text-2xl "
