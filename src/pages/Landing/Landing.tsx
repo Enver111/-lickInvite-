@@ -1,9 +1,10 @@
 import Hero from "./components/Hero";
+import PaperProblems from "./components/PaperProblems";
 const Landing = () => {
   return (
     <section className="mt-20">
       <Hero />
-      <h1>Landing</h1>
+      <PaperProblems />
     </section>
   );
 };
