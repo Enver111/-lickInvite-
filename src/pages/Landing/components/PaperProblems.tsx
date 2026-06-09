@@ -34,7 +34,7 @@ const PaperProblems = () => {
   ];
 
   return (
-    <div className="container mx-auto">
+    <div className="container mx-auto py-20">
       <Title title="Забудьте про бумажные конверты и долгие обзвоны" />
       <div className="grid grid-cols-1 md:grid-cols-[repeat(2,minmax(0,400px))] justify-center items-center gap-10">
         {problems.map((problem) => (
