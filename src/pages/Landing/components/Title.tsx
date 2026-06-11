@@ -19,16 +19,16 @@ const Title = ({
       distance={100}
       direction="horizontal"
       reverse={true}
-      duration={0.9}
+      duration={1.2}
       ease="power3.out"
       initialOpacity={0}
       animateOpacity
       scale={1}
-      threshold={0.1}
+      threshold={0.3}
       delay={0}
       className={cn("text-center my-10 space-y-4", className)}
     >
-      <h2 className="text-xl font-light text-[#E3853C] text-center">
+      <h2 className="text-md font-light uppercase tracking-widest text-[#E3853C] text-center">
         {subtitle}
       </h2>
       <h1
