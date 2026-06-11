@@ -33,7 +33,7 @@ const Title = ({
       </h2>
       <h1
         className={cn(
-          "font-script text-4xl text-gray-500  text-center",
+          "font-script text-4xl text-black  text-center",
           titleClassName,
         )}
       >
