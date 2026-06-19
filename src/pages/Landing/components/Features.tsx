@@ -6,6 +6,7 @@ import {
   Gift,
   Image,
 } from "lucide-react";
+import AnimatedContent from "@/components/AnimatedContent";
 import Title from "./Title";
 
 const features = [
@@ -53,25 +54,37 @@ const Features = () => {
           titleClassName="text-white"
         />
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-white/10">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-[#cc8448]">
           {features.map((f, i) => {
             const Icon = f.icon;
             return (
-              <div
-                key={i}
-                className="p-8 group cursor-default bg-[#0f0f0f] hover:bg-[#1a1a1a] transition-all duration-300"
+              <AnimatedContent
+                key={f.title}
+                distance={60}
+                direction="horizontal"
+                reverse={i % 2 === 0}
+                duration={0.8}
+                ease="power3.out"
+                initialOpacity={0}
+                animateOpacity
+                scale={0.96}
+                threshold={0.15}
+                delay={i * 0.12}
+                className="bg-[#0f0f0f]"
               >
-                <div className="mb-6 w-10 h-10 flex items-center justify-center border border-[#cc8448]/30 hover:border-[#cc8448] transition-all duration-300 rounded-lg">
-                  <Icon size={18} className="text-[#cc8448]" />
+                <div className="p-8 group cursor-default h-full hover:bg-[#1a1a1a] transition-all duration-300">
+                  <div className="mb-6 w-10 h-10 flex items-center justify-center border border-[#cc8448]/30 hover:border-[#cc8448] transition-all duration-300 rounded-lg">
+                    <Icon size={18} className="text-[#cc8448]" />
+                  </div>
+                  <h4
+                    className="mb-3 text-white text-xl font-medium"
+                    style={{ fontFamily: "Inter" }}
+                  >
+                    {f.title}
+                  </h4>
+                  <p className="text-gray-400 text-sm font-light">{f.text}</p>
                 </div>
-                <h4
-                  className="mb-3 text-white text-xl font-medium"
-                  style={{ fontFamily: "Inter" }}
-                >
-                  {f.title}
-                </h4>
-                <p className="text-gray-400 text-sm font-light">{f.text}</p>
-              </div>
+              </AnimatedContent>
             );
           })}
         </div>

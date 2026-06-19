@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Minus, Plus } from "lucide-react";
+import AnimatedContent from "@/components/AnimatedContent";
 import Title from "./Title";
 
 const faqs = [
@@ -68,7 +69,21 @@ const FAQ = () => {
         <Title title="Ответы на частые" subtitle="FAQ" description="вопросы" />
         <div className="border-t border-border">
           {faqs.map((f, i) => (
-            <FAQItem key={i} q={f.q} a={f.a} />
+            <AnimatedContent
+              key={f.q}
+              distance={60}
+              direction="horizontal"
+              reverse={i % 2 === 0}
+              duration={0.8}
+              ease="power3.out"
+              initialOpacity={0}
+              animateOpacity
+              scale={0.96}
+              threshold={0.15}
+              delay={i * 0.12}
+            >
+              <FAQItem q={f.q} a={f.a} />
+            </AnimatedContent>
           ))}
         </div>
       </div>

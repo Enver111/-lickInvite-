@@ -1,3 +1,4 @@
+import AnimatedContent from "@/components/AnimatedContent";
 import Title from "./Title";
 
 const templateSteps = [
@@ -58,24 +59,52 @@ const HowItWorks = () => {
           description="приглашение"
         />
         <div className="grid md:grid-cols-2 gap-0 border border-border rounded-2xl">
-          <div className="p-10 lg:p-14 border-b md:border-b-0 md:border-r border-border">
-            <p
-              className="text-xs uppercase tracking-widest mb-8"
-              style={{ color: "#cc8448", fontFamily: "Inter, sans-serif" }}
-            >
-              Если вы выбрали шаблон
-            </p>
-            <StepList steps={templateSteps} />
-          </div>
-          <div className="p-10 lg:p-14">
-            <p
-              className="text-xs uppercase tracking-widest mb-8"
-              style={{ color: "#cc8448", fontFamily: "Inter, sans-serif" }}
-            >
-              Если хотите индивидуальный дизайн
-            </p>
-            <StepList steps={customSteps} />
-          </div>
+          <AnimatedContent
+            distance={60}
+            direction="horizontal"
+            reverse
+            duration={0.8}
+            ease="power3.out"
+            initialOpacity={0}
+            animateOpacity
+            scale={0.96}
+            threshold={0.15}
+            delay={0}
+            className="border-b md:border-b-0 md:border-r border-border"
+          >
+            <div className="p-10 lg:p-14 h-full">
+              <p
+                className="text-xs uppercase tracking-widest mb-8"
+                style={{ color: "#cc8448", fontFamily: "Inter, sans-serif" }}
+              >
+                Если вы выбрали шаблон
+              </p>
+              <StepList steps={templateSteps} />
+            </div>
+          </AnimatedContent>
+
+          <AnimatedContent
+            distance={60}
+            direction="horizontal"
+            reverse={false}
+            duration={0.8}
+            ease="power3.out"
+            initialOpacity={0}
+            animateOpacity
+            scale={0.96}
+            threshold={0.15}
+            delay={0.12}
+          >
+            <div className="p-10 lg:p-14 h-full">
+              <p
+                className="text-xs uppercase tracking-widest mb-8"
+                style={{ color: "#cc8448", fontFamily: "Inter, sans-serif" }}
+              >
+                Если хотите индивидуальный дизайн
+              </p>
+              <StepList steps={customSteps} />
+            </div>
+          </AnimatedContent>
         </div>
       </div>
     </section>
