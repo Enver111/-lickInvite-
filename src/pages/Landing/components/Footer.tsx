@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
-import { Mail, Send } from "lucide-react";
 
 import Logotype from "@/components/Logotype";
 import { Button } from "@/components/ui/button";
+import { contacts } from "@/constants/contacts";
 
 const navLinks = [
   { label: "Преимущества", to: "/advantages" },
@@ -14,7 +14,7 @@ const navLinks = [
 
 const Footer = () => {
   return (
-    <footer id="contacts" className="scroll-mt-24 bg-[#0f0f0f] text-white border-t border-white/10">
+    <footer className="bg-[#0f0f0f] text-white border-t border-white/10">
       <div className="max-w-5xl mx-auto px-6 py-20">
         <div className="grid gap-12 md:grid-cols-[1.4fr_1fr_1fr]">
           <div className="space-y-5">
@@ -52,26 +52,22 @@ const Footer = () => {
               Контакты
             </p>
             <ul className="space-y-4">
-              <li>
-                <a
-                  href="https://t.me/clickinvite"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-3 text-sm font-light text-white/60 transition-colors hover:text-[#E3853C]"
-                >
-                  <Send size={14} className="shrink-0 text-[#cc8448]" />
-                  Telegram
-                </a>
-              </li>
-              <li>
-                <a
-                  href="mailto:hello@clickinvite.ru"
-                  className="flex items-center gap-3 text-sm font-light text-white/60 transition-colors hover:text-[#E3853C]"
-                >
-                  <Mail size={14} className="shrink-0 text-[#cc8448]" />
-                  hello@clickinvite.ru
-                </a>
-              </li>
+              {contacts.map((contact) => {
+                const Icon = contact.icon;
+                return (
+                  <li key={contact.label}>
+                    <a
+                      href={contact.href}
+                      target={contact.external ? "_blank" : undefined}
+                      rel={contact.external ? "noopener noreferrer" : undefined}
+                      className="flex items-center gap-3 text-sm font-light text-white/60 transition-colors hover:text-[#E3853C]"
+                    >
+                      <Icon size={14} className="shrink-0 text-[#cc8448]" />
+                      {contact.value}
+                    </a>
+                  </li>
+                );
+              })}
             </ul>
           </div>
         </div>

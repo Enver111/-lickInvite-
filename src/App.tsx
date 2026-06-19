@@ -3,6 +3,7 @@ import Landing from "./pages/Landing/Landing";
 import Templates from "./pages/Templates/Templates";
 import PrivacyPolicy from "./pages/Legal/PrivacyPolicy";
 import TermsOfService from "./pages/Legal/TermsOfService";
+import Contacts from "./pages/Contacts/Contacts";
 import Header from "./components/Header";
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Landing />} />
         <Route path="/templates" element={<Templates />} />
+        <Route path="/contacts" element={<Contacts />} />
         <Route path="/privacy" element={<PrivacyPolicy />} />
         <Route path="/terms" element={<TermsOfService />} />
       </Routes>
