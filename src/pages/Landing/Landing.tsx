@@ -4,6 +4,7 @@ import TwoFormats from "./components/TwoFormats";
 import Features from "./components/Features";
 import HowItWorks from "./components/HowItWorks";
 import Pricing from "./components/Pricing";
+import FAQ from "./components/FAQ";
 const Landing = () => {
   return (
     <section className="mt-20">
@@ -13,6 +14,7 @@ const Landing = () => {
       <Features />
       <HowItWorks />
       <Pricing />
+      <FAQ />
     </section>
   );
 };
