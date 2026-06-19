@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 
 const TwoFormats = () => {
   return (
-    <div className="container mx-auto py-20">
+    <section id="templates" className="scroll-mt-24 container mx-auto py-20">
       <Title
         title="Подберём решение под ваши  "
         subtitle="Два формата"
@@ -54,7 +54,7 @@ const TwoFormats = () => {
           </Button>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -43,7 +43,7 @@ const features = [
 
 const Features = () => {
   return (
-    <section className="py-32 px-6 bg-[#0f0f0f]">
+    <section id="advantages" className="scroll-mt-24 py-32 px-6 bg-[#0f0f0f]">
       <div className="max-w-5xl mx-auto">
         <Title
           title="Всё, что нужно для комфорта"

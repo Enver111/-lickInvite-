@@ -63,7 +63,7 @@ function FAQItem({ q, a }: { q: string; a: string }) {
 
 const FAQ = () => {
   return (
-    <section className="py-32 px-6 bg-background">
+    <section id="blog" className="scroll-mt-24 py-32 px-6 bg-background">
       <div className="max-w-3xl mx-auto">
         <Title title="Ответы на частые" subtitle="FAQ" description="вопросы" />
         <div className="border-t border-border">

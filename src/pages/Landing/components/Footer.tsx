@@ -14,7 +14,7 @@ const navLinks = [
 
 const Footer = () => {
   return (
-    <footer className="bg-[#0f0f0f] text-white border-t border-white/10">
+    <footer id="contacts" className="scroll-mt-24 bg-[#0f0f0f] text-white border-t border-white/10">
       <div className="max-w-5xl mx-auto px-6 py-20">
         <div className="grid gap-12 md:grid-cols-[1.4fr_1fr_1fr]">
           <div className="space-y-5">
